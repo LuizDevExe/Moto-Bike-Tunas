@@ -36,8 +36,6 @@ header nav ul {
     font-weight: 600;
 }
 
-
-
 header nav ul li a {
     text-decoration: none;
     color: #222222;
@@ -45,7 +43,6 @@ header nav ul li a {
     font-weight: bold;
 }
 
-.container-cart-button{
+.container-cart-button {
     justify-self: flex-end;
 }
-

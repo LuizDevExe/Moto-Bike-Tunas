@@ -62,7 +62,7 @@ function Home() {
     navigate(`/produtos/${path}`);
   }
 
-  
+
 
   return (
     <>
@@ -71,15 +71,15 @@ function Home() {
         <section className='container-sobre'>
           <article>
             <div>
-             
+
               <h1>Bem-Vindo!</h1>
               <p>
-                Somos uma loja e oficina mecanica localizada em Tunápolis-SC. Atuando a mais de 20 anos no mesmo segmento.
-                Prezamos pelo bom atendimento e pela satisfação dos nossos clientes
+                Somos uma loja e oficina mecânica localizada em Tunápolis-SC, atuando há mais de 20 anos no mesmo segmento.
+                Prezamos pelo bom atendimento e pela satisfação de nossos clientes.
               </p>
               <ul>
                 <li>
-                  <a href="https://www.instagram.com/motobiketunas/" target='blank'onClick={() => handleNavigateMotos()}>
+                  <a href="https://www.instagram.com/motobiketunas/" target='blank' onClick={() => handleNavigateMotos()}>
                     <img src={instagram} alt="" />
                   </a>
                 </li>
@@ -209,7 +209,7 @@ function Home() {
             <ul>
               <li>
                 <div>
-                  <img src="https://img.icons8.com/ios-filled/50/phone.png"  alt="ícone de telefone indicando o número da loja" />
+                  <img src="https://img.icons8.com/ios-filled/50/phone.png" alt="ícone de telefone indicando o número da loja" />
                   <p>(49)99152-5379</p>
                 </div>
               </li>

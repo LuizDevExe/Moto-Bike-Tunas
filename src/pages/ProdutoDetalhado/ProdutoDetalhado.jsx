@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import './ProdutoDetalhado.css'
-import { useParams, Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import './ProdutoDetalhado.css';
+import { useParams, Link } from 'react-router-dom';
 import { getProductByCod } from '../../utils/database/databaseFunctions';
 import HeaderDinamico from '../../Components/HeaderDinamico/HeaderDinamico';
 import FooterDinamico from '../../components/FooterDinamico/FooterDinamico';
-import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import WhatsappButton from '../../Components/WhatsappButton/WhatsappButton';
 
-
-
 function ProdutoDetalhado() {
-    const productInfo = useParams();
+    const { system_cod } = useParams();
     const [product, setProduct] = useState({
         system_cod: 0,
         product: '',
@@ -22,59 +19,57 @@ function ProdutoDetalhado() {
         image_name: ''
     });
 
-    const [productStorage, setProductStorage] = useState([
-        {
-            system_cod: 0,
-            product: "teste",
-            quantity: 0,
-            price: '10'
-        }
-    ]);
+    const [productStorage, setProductStorage] = useState({
+        system_cod: 0,
+        product: '',
+        quantity: 1,
+        price: '',
+        image_url: ''
+    });
+
     useEffect(() => {
         const fetchProduct = async () => {
-            const productData = await getProductByCod(productInfo.system_cod);
+            const productData = await getProductByCod(system_cod);
             setProduct(productData);
 
-            setProductStorage((prevStorage) => [
-                {
-                    ...prevStorage[0],
-                    product: productData.product,
-                    price: productData.price
-                }
-            ]);
+            setProductStorage({
+                system_cod: productData.system_cod,
+                product: productData.product,
+                quantity: 1,
+                price: productData.price,
+                image_url: productData.image_url
+            });
         };
         fetchProduct();
-    }, []);
+    }, [system_cod]);
+
+    const addProductToCart = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const productExisting = cart.findIndex((item) => item.system_cod === product.system_cod);
+
+        if (productExisting >= 0) {
+            cart[productExisting].quantity += productStorage.quantity;
+        } else if (productStorage) {
+            cart.push(productStorage);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.dispatchEvent(new Event("cartUpdated"));
+    };
 
     return (
         <>
             <HeaderDinamico />
             <main className='container-pagina-produto'>
                 <section>
-                    <div className='breadcrumbs-produtos' >
-                        <Breadcrumbs
-                            aria-label="breadcrumb"
-                            separator=">"
-                        >
-                            <Link to={"/home"}>
-                                Home
-                            </Link>
-                            <Link to={"/produtos"}>
-                                Produtos
-                            </Link>
+                    <div className='breadcrumbs-produtos'>
+                        <Breadcrumbs aria-label="breadcrumb" separator=">">
+                            <Link to="/home">Home</Link>
+                            <Link to="/produtos">Produtos</Link>
                             <Link to={`/produtos/${product.category}`}>
-                                {
-                                    product.category === 'estetica' ?
-
-                                        "Estética"
-
-                                        :
-
-                                        product.category
-
-                                }
+                                {product.category === 'estetica' ? "Estética" : product.category}
                             </Link>
-                            <p >{product.product}</p>
+                            <p>{product.product}</p>
                         </Breadcrumbs>
                     </div>
                     <article className='article-produto'>
@@ -86,21 +81,32 @@ function ProdutoDetalhado() {
 
                                 {
                                     product.category === "estetica" ?
-                                        <input type="text" defaultValue={1} />
+                                        <input
+                                            type="number"
+                                            value={productStorage.quantity}
+                                            onChange={(e) => {
+                                                const quantity = parseInt(e.target.value, 10) || 1;
+                                                setProductStorage((prev) => ({
+                                                    ...prev,
+                                                    quantity
+                                                }));
+                                            }}
+                                        />
                                         :
-                                        <></>
+                                        null
                                 }
 
                                 {
-                                    product.category != 'estetica' ?
+                                    product.category !== 'estetica' && productStorage ? (
                                         <WhatsappButton
                                             oneUnit={true}
-                                            products={productStorage}
+                                            products={[productStorage]}
                                         />
-                                        :
-                                        <button>
+                                    ) : (
+                                        <button onClick={addProductToCart}>
                                             Adicionar ao carrinho
                                         </button>
+                                    )
                                 }
                             </div>
                         </div>
@@ -110,11 +116,10 @@ function ProdutoDetalhado() {
                         <p>{product.description}</p>
                     </article>
                 </section>
-
             </main>
             <FooterDinamico />
         </>
-    )
+    );
 }
 
-export default ProdutoDetalhado
+export default ProdutoDetalhado;
