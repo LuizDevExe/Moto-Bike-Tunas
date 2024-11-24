@@ -6,7 +6,7 @@ import { db } from '../../utils/firebase/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { storage } from '../../utils/firebase/firebase';
 
-import loadingSvg from '../../assets/loading/loading.svg'
+import loadingSvg from '../../assets/loading/loading.svg';
 
 export default function ModalNewProduct({ setOpenAddModal, setReloadProducts, reloadProducts, products }) {
     const [product, setProduct] = useState({
