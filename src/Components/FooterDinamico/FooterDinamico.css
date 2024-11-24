@@ -1,0 +1,35 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 15vh;
+    background-color: #000000;
+}
+
+footer section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    width: 80%;
+    height: 100%;
+}
+
+footer section img{
+    width: 12vw;
+}
+
+footer section ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer section span{
+    color: white;
+    font-weight: 600;
+}
+
+footer section ul li img{
+    width: 2vw;
+}

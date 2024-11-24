@@ -1,0 +1,209 @@
+.content-modal-edit-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 20;
+}
+
+.modal-edit-product {
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+    max-height: 720px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.modal-edit-product-top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal-edit-product-top-content h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.modal-edit-product-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-edit-product-cod-div {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.modal-edit-product-cod-div select {
+    width: 275px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
+.modal-edit-product-name-div,
+.modal-edit-product-description-div,
+.modal-edit-product-value-div {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.modal-edit-product-file-div {
+    margin-top: 15px;
+    width: 370px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfdfdf;
+    color: black;
+}
+
+.image-file-edit-modal-form {
+    display: flex;
+    align-items: center;
+}
+
+.image-file-edit-modal-form img {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #dfdfdf;
+    margin-top: 15px;
+}
+
+.modal-edit-product-cod-div h2,
+.modal-edit-product-name-div h2,
+.modal-edit-product-description-div h2,
+.modal-edit-product-value-div h2 {
+    font-weight: 300;
+}
+
+.modal-edit-product-cod-div input,
+.modal-edit-product-name-div input,
+.modal-edit-product-value-div input {
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.modal-edit-product-description-div textarea {
+    height: 120px;
+    padding: 10px;
+    resize: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.modal-edit-product-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.cancel-edit,
+.add-edit {
+    width: 200px;
+    height: 55px;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.cancel-edit,
+.add-edit,
+.del-edit {
+    margin: 5px;
+}
+
+
+.cancel-edit {
+    background-color: rgb(224, 68, 68);
+}
+
+.cancel-edit:hover {
+    opacity: 0.8;
+}
+
+.add-edit {
+    background-color: rgb(82, 180, 95);
+}
+
+.add-edit:hover {
+    opacity: 0.8;
+}
+
+.del-edit {
+    width: 55px;
+    height: 55px;
+    background-color: rgb(224, 68, 68);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.del-edit img {
+    width: 35px;
+    height: 35px;
+}
+
+.del-edit:hover {
+    opacity: 0.8;
+}
+
+.loading-modal-edit-product-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+.loading-modal-edit-product {
+    margin-top: -10px;
+    width: 70px;
+}
+
+.spam-new-product {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.spam-new-product h4 {
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}

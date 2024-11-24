@@ -1,0 +1,25 @@
+.button-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    width: 300px;
+    height: 55px;
+    background-color: rgb(95, 196, 115);
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.button-whatsapp img {
+    width: 40px;
+}
+
+.button-whatsapp:hover {
+    opacity: 0.9;
+}

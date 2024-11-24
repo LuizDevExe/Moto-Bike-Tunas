@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+}
+
+.logo-principal img {
+    width: 15vw;
+    cursor: pointer;
+}
+
+.logo-principal img:hover {
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+
+
+header nav {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+    margin-left: 5vw;
+    font-weight: 600;
+}
+
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container-cart-button{
+    justify-self: flex-end;
+}
+

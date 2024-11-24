@@ -1,0 +1,172 @@
+.content-modal-new-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 20;
+}
+
+.modal-new-product {
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.modal-new-product-top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal-new-product-top-content h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.modal-new-product-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-new-product-cod-div {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.modal-new-product-cod-div select {
+    width: 275px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
+.modal-new-product-name-div,
+.modal-new-product-description-div,
+.modal-new-product-value-div {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.modal-new-product-file-div {
+    margin-top: 15px;
+    width: 500px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfdfdf;
+    color: black;
+    border-radius: 5px;
+}
+
+.modal-new-product-cod-div h2,
+.modal-new-product-name-div h2,
+.modal-new-product-description-div h2,
+.modal-new-product-value-div h2 {
+    font-weight: 300;
+}
+
+.modal-new-product-cod-div input,
+.modal-new-product-name-div input,
+.modal-new-product-value-div input {
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.modal-new-product-description-div textarea {
+    height: 120px;
+    padding: 10px;
+    resize: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.modal-new-product-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel,
+.add {
+    width: 220px;
+    height: 55px;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    margin: 20px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.cancel {
+    background-color: rgb(224, 68, 68);
+}
+
+.cancel:hover {
+    opacity: 0.8;
+}
+
+.add {
+    background-color: rgb(82, 180, 95);
+}
+
+.add:hover {
+    opacity: 0.8;
+}
+
+.loading-modal-new-product-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+.loading-modal-new-product {
+    margin-top: 0px;
+    width: 60px;
+}
+
+.spam-edit-product {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.spam-edit-product h4 {
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}

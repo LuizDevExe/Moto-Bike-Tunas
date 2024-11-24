@@ -1,0 +1,29 @@
+.container-cart  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 2rem;
+    padding: .5rem;
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+    background-color: #a59696;
+}
+
+.container-cart button img:hover{
+    transform: scale(1.1);
+}
+
+.container-cart div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-cart div button {
+    align-self: flex-end;
+    margin-right: 0;
+    background-color: #ffffff00;
+}
