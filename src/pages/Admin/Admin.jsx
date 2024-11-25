@@ -3,8 +3,8 @@ import './Admin.css';
 
 import { getProducts } from '../../utils/database/databaseFunctions';
 import whiteLogo from '../../assets/logos/logo-montanha-branca.webp';
-import ModalNewProduct from '../../components/ModalNewProduct/ModalNewProduct';
-import ModalEditProduct from '../../components/ModalEditProduct/ModalEditProduct';
+import ModalNewProduct from '../../components/ModalNewProduct/ModalNewProduct.jsx';
+import ModalEditProduct from '../../components/ModalEditProduct/ModalEditProduct.jsx';
 
 export default function Admin() {
     const [category, setCategory] = useState("Todos");
