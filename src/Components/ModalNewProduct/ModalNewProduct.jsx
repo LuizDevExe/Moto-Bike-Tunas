@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./ModalNewProduct.css"
+import "./ModalNewProduct.css";
 
 import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { db } from '../../utils/firebase/firebase';
